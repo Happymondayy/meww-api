@@ -21,7 +21,6 @@ async def call_gemini(prompt: str) -> str:
             data = response.json()
             print(data)
             return data["candidates"][0]["content"]["parts"][0]["text"]
-
 from pydantic import BaseModel
 
 class Record(BaseModel):
